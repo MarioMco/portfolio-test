@@ -1,0 +1,14 @@
+CREATE TABLE StoreInfo (
+	StoreKey INT PRIMARY KEY,
+	StoreType NVARCHAR(15) NOT NULL,
+	StoreName NVARCHAR(100) NOT NULL,
+	StoreStatus NVARCHAR(20) NOT NULL
+)
+
+CREATE TABLE TotalSales(
+    StoreKey INT NOT NULL,
+    TotalCost MONEY NOT NULL,
+    TotalSalesAmount MONEY NOT NULL,
+    FOREIGN KEY(StoreKey) REFERENCES StoreInfo(StoreKey) ON DELETE CASCADE
+)
+

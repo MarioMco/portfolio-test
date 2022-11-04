@@ -1,0 +1,27 @@
+https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash
+
+Install Steps:
+
+sudo docker pull mcr.microsoft.com/mssql/server:2022-latest
+
+
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=contoso123!' -p 1433:1433 --name sql1 --hostname sql1 -d mcr.microsoft.com/mssql/server:2022-latest
+
+
+sudo npm  install -g sql-cli
+
+
+Restore data:
+
+sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
+
+sudo docker cp ContosoRetailDW.bak sql1:/var/opt/mssql/backup
+
+
+
+This is not needed if we will use Azure Studio
+Start:
+
+mssql -u sa -p contoso123!
+
+
