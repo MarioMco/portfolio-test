@@ -1,3 +1,5 @@
+# Power BI - DAX
+Here is the DAX Query used in our Power BI example:
 
 #### Create Calendar with DAX
 ```
@@ -124,5 +126,7 @@ RETURN
         ALL('Calendar'[Date])
     )
 ```
+
+# Power BI - Dashboard
 
 <img src="Dashboard.png" alt="Contosodb Dashboard" title="Contosodb Dashboard">
