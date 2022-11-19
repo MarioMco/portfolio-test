@@ -57,3 +57,22 @@ In this example we have showed how to connect to SQL Server with [Python, analyz
  + matplotlib
  + sqlalchemy
  + dotenv
+
+## [Apache Airflow](/Apache/Airflow)
+In this example we have created data pipeline with Apache Airflow. We have used different Airflow operators and sensors to extract, transform and load data. We have extract data from SQL Server, API, SFTP Server and store it in Postgres DB. Here is the list of Hooks, Operators and Sensors we have used:
+ + PythonOperator
+ + BashOperator
+ + SFTPOperator
+ + PostgresOperator
+ + DummyOperator
+ + ExternalTaskSensor
+ + BaseHook
+ + MsSqlHook
+ 
+ ### ETL
+ <img src="Apache/Airflow/etl_to_db.png" alt="ETL to DB" title="ETL to DB">
+ 
+ ### External Task Sensor and Processing
+ <img src="Apache/Airflow/etl_processing.png" alt="ETL and Processing" title="ETL and Processing">
+ 
+ 
