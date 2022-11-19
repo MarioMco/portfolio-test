@@ -73,6 +73,6 @@ In this example we have created data pipeline with Apache Airflow. We have used 
  <img src="Apache/Airflow/etl_to_db.png" alt="ETL to DB" title="ETL to DB">
  
  ### External Task Sensor and Processing
- <img src="Apache/Airflow/etl_processing.png" width="200" alt="ETL and Processing" title="ETL and Processing">
+ <img src="Apache/Airflow/etl_processing.png" width="300" alt="ETL and Processing" title="ETL and Processing">
  
  
