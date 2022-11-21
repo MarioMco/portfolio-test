@@ -25,7 +25,7 @@ We have used ContosRetailDW database which has been restored to SQL Server, API 
   + Store data from CSV file into Postgres
   + PUT and GET file from SFTP Server
  
- ### 2.[External Task Sensor and Processing](dags/process_load_to_db.py)
+ ### 2. [External Task Sensor and Processing](dags/process_load_to_db.py)
  <img src="etl_processing.png" width="300" alt="ETL and Processing" title="ETL and Processing">
  
   + Use ExternalTaskSensor to listen for previous dag to finish sucesscully
