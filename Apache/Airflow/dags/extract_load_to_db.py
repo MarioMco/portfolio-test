@@ -38,7 +38,7 @@ with DAG(
 
     with TaskGroup(
         "extract_and_load_to_psql",
-        tooltip="Extract from SQL Server or API and load to Postgres",
+        tooltip="Extract data from SQL Server or load to Postgres",
     ) as extract_sql_server_load_postgres:
         ext_product_sql_load_psql = fn.from_sql_to_postgres(SQL_PRODUCT_TABLES)
         ext_sales_sql_load_psql = fn.from_sql_to_postgres(SQL_SALES_TABLES)
