@@ -1,4 +1,4 @@
-# Data Engineering - ETL, Apache Airflow and Kafka, SQL, Data Analysis and Data Visualization
+# Data Engineering - ETL, Apache Airflow and Kafka, FastAPI, SQL, Data Analysis and Data Visualization
 
 ### Built with
 
