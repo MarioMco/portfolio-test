@@ -7,6 +7,9 @@
 
 + Apache Kafka
 
++ API
+  + FastAPI
+
 + Python
   + Pandas
   + matplotlib
