@@ -5,3 +5,5 @@
 .DS_Store
 Screenshot/
 Apache/Airflow/data
+venv/
+__pycache__
