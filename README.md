@@ -9,6 +9,9 @@
 
 + API
   + FastAPI
+    +  sqlalchemy
+    +  pydantic
+    +  alembic 
 
 + Python
   + Pandas
