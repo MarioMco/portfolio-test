@@ -2,16 +2,16 @@
 
 ### Built with
 
-+ Apache Airflow
-  + Docker
-
-+ Apache Kafka
++ Apache 
+  + Airflow
+  + Kafka
 
 + API
   + FastAPI
     +  sqlalchemy
     +  pydantic
     +  alembic 
+    + pytest
 
 + Python
   + Pandas
