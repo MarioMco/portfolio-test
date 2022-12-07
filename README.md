@@ -82,5 +82,6 @@ In this example we have created data pipeline with Apache Airflow. We have used 
  <img src="Apache/Airflow/etl_processing.png" width="300" alt="ETL and Processing" title="ETL and Processing">
  
  ## [API - FastAPI](/API/FastAPI)
+  <img src="/API/FastAPI/FastAPI docs.png" alt="FastAPI docs" title="FastAPI docs">
  
  
