@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   fastapi-test:
     environment:
-      name: api test
+      name: api testing
     env:
       DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
       DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
