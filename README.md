@@ -81,4 +81,6 @@ In this example we have created data pipeline with Apache Airflow. We have used 
  ### External Task Sensor and Processing
  <img src="Apache/Airflow/etl_processing.png" width="300" alt="ETL and Processing" title="ETL and Processing">
  
+ ## [API - FastAPI](/API/FastAPI)
+ 
  
