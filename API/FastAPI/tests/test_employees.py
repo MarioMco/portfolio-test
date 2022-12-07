@@ -94,3 +94,4 @@ def test_update_employee_non_exist(authorized_client, test_user, test_employees)
     assert upadated_employee.title == data["title"]
     assert str(upadated_employee.hire_date) == data["hire_date"]
     assert upadated_employee.gender == data["gender"]
+    
