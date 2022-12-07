@@ -1,6 +1,5 @@
 *.env
 *.bak
-*.yaml
 *.csv
 .DS_Store
 Screenshot/
