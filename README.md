@@ -42,6 +42,9 @@
 + Power BI
   + DAX
   + M
+  
++ CI/CD
+  + GitHub Actions
 
 
 ## [SQL](/BD)
@@ -83,5 +86,8 @@ In this example we have created data pipeline with Apache Airflow. We have used 
  
  ## [API - FastAPI](/API/FastAPI)
   <img src="/API/FastAPI/FastAPI docs.png" alt="FastAPI docs" title="FastAPI docs">
+  
+ ## [CI/CD - GitHub Actions](/.github/workflows)
+ Here we are using GitHub Actions to test our FastAPI code everytime after we push or pull new code to or from GitHub.
  
  
