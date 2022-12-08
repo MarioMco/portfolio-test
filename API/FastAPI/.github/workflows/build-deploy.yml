@@ -1,4 +1,4 @@
-name: Build and Deploy Code
+name: FastAPI Code Testing
 
 on: [push, pull_request]
 
