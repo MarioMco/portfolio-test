@@ -1,4 +1,5 @@
 from fastapi import Response, status, HTTPException, Depends, APIRouter
+from fastapi_pagination import Page, add_pagination, paginate
 from .. import models, schemas, oauth2
 from typing import List, Optional
 from sqlalchemy.orm import Session
@@ -8,7 +9,7 @@ from ..database import get_db
 router = APIRouter(prefix="/offers-list", tags=["OffersList"])
 
 
-@router.get("/", response_model=List[schemas.OfferListOut])
+@router.get("/", response_model=Page[schemas.OfferListOut])
 def get_offers_list(
     db: Session = Depends(get_db),
     current_user: int = Depends(oauth2.get_current_user),
@@ -23,7 +24,7 @@ def get_offers_list(
         .offset(offset)
         .all()
     )
-    return offers_list
+    return paginate(offers_list)
 
 
 @router.post(
@@ -118,3 +119,5 @@ def update_offer_product(
     offer_product_query.update(new_update)
     db.commit()
     return offer_product_query.first()
+
+add_pagination(router)

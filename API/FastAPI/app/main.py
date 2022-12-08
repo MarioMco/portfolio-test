@@ -9,6 +9,8 @@ app.include_router(employee.router)
 app.include_router(offer.router)
 app.include_router(auth.router)
 
+
+
 @app.get("/")
 def root():
     return {"message": "Hello from API!"}

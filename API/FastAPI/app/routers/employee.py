@@ -1,18 +1,18 @@
 from fastapi import Response, status, HTTPException, Depends, APIRouter
-from typing import List
+from fastapi_pagination import Page, add_pagination, paginate
 from .. import models, schemas, oauth2
 from sqlalchemy.orm import Session
 from ..database import get_db
 
 router = APIRouter(prefix="/employees", tags=["Employees"])
 
-
-@router.get("/", response_model=List[schemas.EmployeeOut])
+@router.get("/", response_model=Page[schemas.EmployeeOut])
 def get_employees(
     db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)
 ):
     employees = db.query(models.Employee).all()
-    return employees
+    
+    return paginate(employees)
 
 
 @router.post(
@@ -87,3 +87,6 @@ def update_employee(
     employee_query.update(updated_employee.dict())
     db.commit()
     return employee_query.first()
+
+add_pagination(router)
+
