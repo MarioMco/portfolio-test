@@ -1,0 +1,12 @@
+name: Test Build
+
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pulling get repo
+        uses: actions/checkout@v2
+      - name: hello
+        run: echo "hello test"
