@@ -85,6 +85,12 @@ In this example we have created data pipeline with Apache Airflow. We have used 
  <img src="Apache/Airflow/etl_processing.png" width="300" alt="ETL and Processing" title="ETL and Processing">
  
  ## [API - FastAPI](/API/FastAPI)
+ In this example we have used python and FastAPI Web Framework and have created multiple GET, POST, PUT and DELETE APIs. To achive this we have used libraries like:
+ + sqlalchemy
+ + pydantic
+ + alembic
+ + pytest
+ 
   <img src="/API/FastAPI/FastAPI docs.png" alt="FastAPI docs" title="FastAPI docs">
   
  ## [CI/CD - GitHub Actions](/.github/workflows)
