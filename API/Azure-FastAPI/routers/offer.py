@@ -1,6 +1,6 @@
 from fastapi import Response, status, HTTPException, Depends, APIRouter
 from fastapi_pagination import Page, add_pagination, paginate
-from .. import models, schemas, oauth2
+from .. import models, schemas
 from typing import List, Optional
 from sqlalchemy.orm import Session
 from ..database import get_db
@@ -12,7 +12,6 @@ router = APIRouter(prefix="/offers-list", tags=["OffersList"])
 @router.get("/", response_model=Page[schemas.OfferListOut])
 def get_offers_list(
     db: Session = Depends(get_db),
-    current_user: int = Depends(oauth2.get_current_user),
     limit: int = 10,
     offset: int = 0,
     search: Optional[str] = "",
@@ -33,7 +32,7 @@ def get_offers_list(
 def create_offer_product(
     offer_product: schemas.OfferListCreate,
     db: Session = Depends(get_db),
-    current_user: int = Depends(oauth2.get_current_user),
+    current_user: int = 1,
 ):
     amount = offer_product.qty * offer_product.price
     new_offer_product = models.OfferList(
@@ -49,8 +48,7 @@ def create_offer_product(
 @router.get("/{id}", response_model=List[schemas.OfferListOut])
 def get_offer(
     id: int,
-    db: Session = Depends(get_db),
-    current_user: int = Depends(oauth2.get_current_user),
+    db: Session = Depends(get_db)
 ):
     offer_product = (
         db.query(models.OfferList).filter(models.OfferList.offer_id == id).all()
@@ -69,7 +67,7 @@ def get_offer(
 def delete_offer_product(
     id: int,
     db: Session = Depends(get_db),
-    current_user: int = Depends(oauth2.get_current_user),
+    current_user: int = 1,
 ):
     offer_product_query = db.query(models.OfferList).filter(models.OfferList.id == id)
     offer_product = offer_product_query.first()
@@ -96,7 +94,7 @@ def update_offer_product(
     id: int,
     updated_offer_product: schemas.OfferListCreate,
     db: Session = Depends(get_db),
-    current_user: int = Depends(oauth2.get_current_user),
+    current_user: int = 1,
 ):
     offer_product_query = db.query(models.OfferList).filter(models.OfferList.id == id)
     offer_product = offer_product_query.first()

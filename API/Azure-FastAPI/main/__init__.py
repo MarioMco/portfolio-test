@@ -2,16 +2,14 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 import azure.functions as func
 
-from ..routers import employee, offer, user, auth
+from ..routers import employee, offer
 
 app = FastAPI()
 
 app.include_router(employee.router)
-app.include_router(auth.router)
 app.include_router(offer.router)
-app.include_router(user.router)
 
-@app.get("/hello")
+@app.get("/")
 def hello():
     return {"message": "welcome to my API!!!"}
 
