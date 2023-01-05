@@ -91,7 +91,7 @@ In this example we have created data pipeline with Apache Airflow. We have used 
  + alembic
  + pytest
  
- We have used Azure Function and published API on [Azure](/API/Azure-FastAPI)
+ We have used Azure Function and published API with [Azure](/API/Azure-FastAPI)
  
   <img src="/API/FastAPI/FastAPI docs.png" alt="FastAPI docs" title="FastAPI docs">
   
