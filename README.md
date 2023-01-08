@@ -58,7 +58,9 @@ Here we have used Docker to run SQL Server on Mac and ContosoRetailDW as databas
 In this example we have used data from ContosoRetailDW database were we have created multiple [DAX queries](/PowerBI/DAX.txt) and [Dashboard](PowerBI/Dashboard.png). To get data we have connected directly to SQL Server.
 <img src="PowerBI/Dashboard.png" alt="Contosodb Dashboard" title="Contosodb Dashboard">
 
-## [Python Data Analysis](/DB/Analytics/Python/)
+## [Pyhton](/Pyhton)
+
+### [Data Analysis](/DB/Analytics/Python/)
 In this example we have showed how to connect to SQL Server with [Python, analyze and visualize data](DB/Analytics/Python/). Here is the list of libraires we have used:
  + pandas
  + numpy
@@ -67,8 +69,11 @@ In this example we have showed how to connect to SQL Server with [Python, analyz
  + sqlalchemy
  + dotenv
 
-## [Python Big Data](/Pyhton/big_data)
+### [Big Data](/Python/big_data/)
 In this example we have read big data from CSV file (9GB) and SQL Server database. Then we used Pandas group by to calculate the total amount.
+
+### [Generator](/Python/Generator)
+In this example we have created generator function to GET data from API. This way we yield the JSON response one chunk at a time.
 
 ## [Apache Airflow](/Apache/Airflow)
 In this example we have created data pipeline with Apache Airflow. We have used different Airflow operators and sensors to extract, transform and load data. We have extract data from SQL Server, API, SFTP Server and store it in Postgres DB. Here is the list of Hooks, Operators and Sensors we have used:
