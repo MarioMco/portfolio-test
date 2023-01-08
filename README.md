@@ -67,6 +67,9 @@ In this example we have showed how to connect to SQL Server with [Python, analyz
  + sqlalchemy
  + dotenv
 
+## [Python Big Data](/Pyhton/big_data)
+In this example we have read big data from CSV file (9GB) and SQL Server database. Then we used Pandas group by to calculate the total amount.
+
 ## [Apache Airflow](/Apache/Airflow)
 In this example we have created data pipeline with Apache Airflow. We have used different Airflow operators and sensors to extract, transform and load data. We have extract data from SQL Server, API, SFTP Server and store it in Postgres DB. Here is the list of Hooks, Operators and Sensors we have used:
  + PythonOperator
